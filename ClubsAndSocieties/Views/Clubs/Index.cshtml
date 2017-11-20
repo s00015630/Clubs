@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ClubsAndSocieties.Models.Club>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="page-header">
+    <h1 class="text-center">Manage Clubs and Societies</h1>
+</div>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <a asp-action="Index" id="displayAll"><input type="button" value="Display All" /></a>
+        <input type="text" id="searchClubtxtBox" name="SearchString" value="@ViewData["currentFilter"]" />
+        <input type="submit" value="Search" class="btn btn-default" />
+        <a asp-action="Create" class="createBtn"><input type="button" value="Create" /></a>
+
+    </div>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Chairperson)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Secretary)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Treasurer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Administrator)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chairperson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Secretary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Treasurer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Administrator.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><input type="button" class="editBtn" value="Edit" /></a>
+                <a asp-action="Details" asp-route-id="@item.Id"><input type="button" class="detailsBtn" value="Details" /></a>
+                <a asp-action="Delete" asp-route-id="@item.Id"><input type="button" class="deleteBtn" value="Delete" /></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

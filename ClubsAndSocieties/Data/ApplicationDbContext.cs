@@ -15,6 +15,14 @@ namespace ClubsAndSocieties.Data
         {
         }
 
+        public DbSet<Club> Clubs { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Administrator> Administors { get; set; }
+        public DbSet<ClubEvent> ClubEvents { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<Member> Members { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Post> Posts { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
