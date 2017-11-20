@@ -5,7 +5,10 @@
 .body-content {
     background-color: #f4cecb;
 }
-
+/*button*/
+#logout{
+    padding:6px 20px 6px 12px;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
