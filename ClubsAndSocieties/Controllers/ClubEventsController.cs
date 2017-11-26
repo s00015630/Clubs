@@ -16,13 +16,28 @@ namespace ClubsAndSocieties.Controllers
 
         public ClubEventsController(ApplicationDbContext context)
         {
+
             _context = context;
+ 
         }
 
         // GET: ClubEvents
         public async Task<IActionResult> Index()
         {
+            //string message = "It didnt get into the foreach loop!!";
             var applicationDbContext = _context.ClubEvents.Include(c => c.ClubsAndSociety).Include(c => c.Event);
+            //foreach (var item in applicationDbContext)
+            //{
+            //    if (item != null && item.Event.PublicClubEvent != true)
+            //    {
+            //        message = "NO EVENTS FOR APPROVAL";
+            //        return View(message);
+            //    }
+            //    else
+            //    {
+            //        return View(await applicationDbContext.ToListAsync());
+            //    }
+            //}
             return View(await applicationDbContext.ToListAsync());
         }
 
