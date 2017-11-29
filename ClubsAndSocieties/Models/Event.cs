@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,8 @@ namespace ClubsAndSocieties.Models
     {
         public int Id { get; set; }
 
-
+        [ForeignKey("Club")]
+        public int ClubID { get; set; }
         public string Title { get; set; }
 
         public string Description { get; set; }
@@ -23,8 +25,8 @@ namespace ClubsAndSocieties.Models
 
         // Need to add these to match the Db table in Azure
         public bool PrivateClubEvent { get; set; }
-        public bool PublicClubEvent { get; set; } 
-        public virtual ICollection<ClubEvent> ClubEvents { get; set; }
+        public bool PublicClubEvent { get; set; }
+        //public virtual Club Clubs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Post> Posts { get; set; }

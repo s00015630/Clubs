@@ -22,7 +22,21 @@ namespace ClubsAndSocieties.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Events.ToListAsync());
+            string message = "No public events to approve";
+            //Select the events that are marked as public
+            var query = (from e in _context.Events
+                         where e.PublicClubEvent == true
+                         select e);
+
+            var results = query.ToListAsync();
+
+            if (results == null)
+            {
+                return View(message);
+            }
+            else
+                return View(await results);
+            //return View(await _context.Events.ToListAsync());
         }
 
         // GET: Events/Details/5

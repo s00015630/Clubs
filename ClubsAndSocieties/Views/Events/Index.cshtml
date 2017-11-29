@@ -11,9 +11,12 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr>    
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ClubID)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Description)
@@ -46,6 +49,9 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ClubID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
@@ -65,6 +71,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PublicClubEvent)
+            </td>
+            <td>
+                <button type="button">Deny</button>
+            </td>
+            <td>
+                <button type="button">Approve</button>
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

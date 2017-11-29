@@ -8,11 +8,11 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace ClubsAndSocieties.Data.Migrations
+namespace ClubsAndSocieties.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20171115190713_AllClassesAdded")]
-    partial class AllClassesAdded
+    [Migration("20171129184043_tableCreation")]
+    partial class tableCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -124,28 +124,12 @@ namespace ClubsAndSocieties.Data.Migrations
                     b.ToTable("Clubs");
                 });
 
-            modelBuilder.Entity("ClubsAndSocieties.Models.ClubEvent", b =>
+            modelBuilder.Entity("ClubsAndSocieties.Models.Event", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("ClubID");
-
-                    b.Property<int>("EventID");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClubID");
-
-                    b.HasIndex("EventID");
-
-                    b.ToTable("ClubEvents");
-                });
-
-            modelBuilder.Entity("ClubsAndSocieties.Models.Event", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description");
 
@@ -367,19 +351,6 @@ namespace ClubsAndSocieties.Data.Migrations
                     b.HasOne("ClubsAndSocieties.Models.Administrator", "Administrator")
                         .WithMany("Clubs")
                         .HasForeignKey("AdministratorID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("ClubsAndSocieties.Models.ClubEvent", b =>
-                {
-                    b.HasOne("ClubsAndSocieties.Models.Club", "ClubsAndSociety")
-                        .WithMany("ClubEvents")
-                        .HasForeignKey("ClubID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("ClubsAndSocieties.Models.Event", "Event")
-                        .WithMany("ClubEvents")
-                        .HasForeignKey("EventID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

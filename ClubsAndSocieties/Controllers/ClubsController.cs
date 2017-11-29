@@ -20,34 +20,10 @@ namespace ClubsAndSocieties.Controllers
         }
 
         // GET: Clubs
-        public async Task<IActionResult> Index(
-                                string currentFilter,
-                                string searchString,
-                                int? page
-                                        )
+        public async Task<IActionResult> Index()
         {
-            ViewData["CurrentFilter"] = searchString;
-
             var applicationDbContext = _context.Clubs.Include(c => c.Administrator);
-            //return View(await applicationDbContext.ToListAsync());
-            var club = from c in _context.Clubs
-                        select c;
-            if (searchString != null)
-            {
-                page = 1;
-            }
-            else
-            {
-                searchString = currentFilter;
-            }
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                club = club.Where(c => c.Name.Contains(searchString));
-            }
-            //return View(await _context.ClubsAndSocieties.ToListAsync());
-            //PaginatedList is a class I added
-            int pageSize = 10;
-            return View(await PaginatedList<Club>.CreateAsync(club.AsNoTracking(), page ?? 1, pageSize));
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Clubs/Details/5
@@ -70,7 +46,6 @@ namespace ClubsAndSocieties.Controllers
         }
 
         // GET: Clubs/Create
-        //[Authorize(Roles="Admin")]
         public IActionResult Create()
         {
             ViewData["AdministratorID"] = new SelectList(_context.Administors, "Id", "Id");
