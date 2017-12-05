@@ -10,7 +10,7 @@ namespace ClubsAndSocieties.Models
     {
         public int Id { get; set; }
 
-        [ForeignKey("Club")]
+        
         public int ClubID { get; set; }
         public string Title { get; set; }
 

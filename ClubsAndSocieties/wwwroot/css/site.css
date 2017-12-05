@@ -62,10 +62,21 @@
     }
 }
 
+/*responsive table -- adds scroll bar */
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
 
+th, td {
+    text-align: left;
+    padding: 8px;
+}
 
-.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
-    border-bottom: solid 1px #cdcdcd;
+tr:nth-child(even) {
+    background-color: #f2f2f2
 }
 
 .navbar-inverse .navbar-nav > li > a {

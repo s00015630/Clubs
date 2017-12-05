@@ -12,6 +12,8 @@ using ClubsAndSocieties.Data;
 using ClubsAndSocieties.Models;
 using ClubsAndSocieties.Services;
 
+
+
 namespace ClubsAndSocieties
 {
     public class Startup
@@ -65,6 +67,9 @@ namespace ClubsAndSocieties
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
+            //add signalR
+            services.AddSignalR();
+
             services.AddMvc();
         }
 
@@ -85,6 +90,9 @@ namespace ClubsAndSocieties
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            //setting up signalR
+            app.UseSignalR();          
 
             app.UseMvc(routes =>
             {
