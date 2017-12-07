@@ -20,10 +20,18 @@ namespace ClubsAndSocieties.Controllers
         }
 
         // GET: Clubs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var applicationDbContext = _context.Clubs.Include(c => c.Administrator);
-            return View(await applicationDbContext.ToListAsync());
+            ViewData["CurrentFilter"] = searchString;
+            var clubs = from c in _context.Clubs
+                           select c;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                clubs = clubs.Where(c => c.Name.Contains(searchString));
+            }
+
+            //var applicationDbContext = _context.Clubs.Include(c => c.Administrator);
+            return View(await clubs.AsNoTracking().ToListAsync());
         }
 
         // GET: Clubs/Details/5

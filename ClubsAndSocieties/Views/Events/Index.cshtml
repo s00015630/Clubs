@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-center">Events For Approval</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="responstable">
     <thead>
         <tr>    
                 <th>
@@ -30,16 +30,14 @@
                 <th>
                     @Html.DisplayNameFor(model => model.EndDate)
                 </th>
+                
                 <th>
-                    @Html.DisplayNameFor(model => model.Image) 
+                    Private
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.PrivateClubEvent)
+                    Public
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.PublicClubEvent)
-                </th>
-            <th></th>
+            
         </tr>
     </thead>
     <tbody>
@@ -63,9 +61,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Image)
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.PrivateClubEvent)
             </td>
