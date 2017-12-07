@@ -59,33 +59,59 @@
     </tbody>
 </table>
 
-<div class="room"></div>
-       
-<label class="sr-only" for="message">Message</label>
-<input type="text" id="message" placeholder="your message...">
-        
-<button type="submit" class="btn btn-primary" [disabled]="!messageForm.valid">Send SignalR Message</button>
-    
+@*this code is for the testing of signalR
+
+        <div class="room"></div>
+
+    <label class="sr-only" for="message">Message</label>
+    <input type="text" id="message" placeholder="your message...">
+
+    <button type="submit" class="btn btn-primary" [disabled]="!messageForm.valid">Send SignalR Message</button>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/signalr/jquery.signalR.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script type="text/javascript" src="/signalr/hubs"></script>
+    <script>
+        var connection = $.hubConnection(), hub = connection.createHubProxy('chat');
+
+        var join = function (msg) {
+            $('<p>').text(msg).appendTo('.room');
+        };
+
+        hub.on('join', join);
+
+        connection.start(function () {
+            hub.invoke('join');
+        });
+
+    </script>*@ 
 
 
+@* 
+    <script>
 
+     var transportType = signalR.TransportType.WebSockets;
+     //can also be ServerSentEvents or LongPolling
+     var logger = new signalR.ConsoleLogger(signalR.LogLevel.Information);
+     var chatHub = new signalR.HttpConnection(`http://${document.location.host}/chat`, { transport: transportType, logger: logger });
+     var chatConnection = new signalR.HubConnection(chatHub, logger);
 
+     chatConnection.onClosed = e => {
+         console.log('connection closed');
+     };
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/signalr/jquery.signalR.min.js"></script>
-<script src="signalr/hubs"></script>
+     chatConnection.on('Send', (message) => {
+         console.log('received message');
+     });
 
-<script>
-    var connection = $.hubConnection(), hub = connection.createHubProxy('chat');
+     chatConnection.start().catch(err => {
+         console.log('connection error');
+     });
 
-    var join = function (msg) {
-        $('<p>').text(msg).appendTo('.room');
-    };
+     function send(message) {
+         chatConnection.invoke('Send', message);
+     }
 
-    hub.on('join', join);
+</script>*@
 
-    connection.start(function () {
-        hub.invoke('join');
-    });
-
-</script>

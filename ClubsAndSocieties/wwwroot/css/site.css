@@ -1,5 +1,6 @@
-﻿body {
-    background-color: #cdcdcd;
+﻿
+body {
+    background-color: #fff;
 }
 /* Wrapping element */
 .body-content {
@@ -63,11 +64,20 @@
 }
 
 /*responsive table -- adds scroll bar */
-.table {
-    border-collapse: collapse;
-    border-spacing: 0;
+.responstable {
+    margin: 1em 0;
     width: 100%;
-    border: 1px solid #ddd;
+    overflow: hidden;
+    background: #FFF;
+    color: #024457;
+    border-radius: 10px;
+    border: 1px solid #167F92;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
 }
 
 th, td {
@@ -80,7 +90,7 @@ tr:nth-child(even) {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-    color: #fff;
+    color: #ffffff;
 }
 
 .dl-horizontal {

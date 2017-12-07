@@ -11,8 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using ClubsAndSocieties.Data;
 using ClubsAndSocieties.Models;
 using ClubsAndSocieties.Services;
-
-
+using Microsoft.AspNetCore.SignalR;
+using ClubsAndSocieties.Hubs;
+//[assembly: OwinStartup(typeof(Connect4.Server.Startup))]
 
 namespace ClubsAndSocieties
 {
@@ -92,7 +93,10 @@ namespace ClubsAndSocieties
             app.UseAuthentication();
 
             //setting up signalR
-            app.UseSignalR();          
+            //app.UseSignalR(routes =>
+            //{
+            //    routes.MapHub<ChatHub>("chat");
+            //});
 
             app.UseMvc(routes =>
             {
