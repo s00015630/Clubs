@@ -5,11 +5,11 @@
     -webkit-text-size-adjust: 100%;
 }
 body {
-    background-color: #fff;
+    background-color: white;
 }
 /* Wrapping element */
 .body-content {
-    background-color: #f4cecb;
+   background-color: burlywood;
 }
 /*button*/
 #logout{
@@ -51,14 +51,15 @@ body {
 }
 
 .jumbotron {
-    background-color: #94618e;
+    background-color: #418681;
     margin-bottom: 0px;
 }
 
 .navbar-inverse {
-    background-color: #49274a;
+    background-color: #A3BEBC;
     border-radius: 0;
     border: none;
+    border-bottom: 1px solid darkgray;
 }
 
 @media only screen and (min-width:1200px) {
@@ -90,7 +91,7 @@ table {
     
 }
 tr:nth-child(even) {
-    background: #CCC
+    background: #eae8e5;
 }
 @media (min-width: 480px) {
     .responstable th, .responstable td {
@@ -111,7 +112,7 @@ tr:nth-child(even) {
 
 .responstable th {
     border: 1px solid #FFF;
-    background-color: #94618e;
+    background-color: #A3BEBC;
     color: #FFF;
     padding: 1em;
     border-radius: 7px;
@@ -169,7 +170,12 @@ td, th {
     padding-left: 5%;
 }
 footer {
-    background-color: #49274a;
+    background-color: #418681;
     color: #fff;
     padding: 25px;
+    margin-top:30px;
+}
+.navbar-inverse .btn-link
+{
+    color:#fff;
 }
