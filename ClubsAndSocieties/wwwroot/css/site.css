@@ -49,7 +49,33 @@ body {
         margin: 0 auto;
     }
 }
-
+/*page heading*/
+.pageHeading{
+    color:white;
+    margin-top:50px;
+    margin-bottom: 50px;
+    font-weight:600;
+}
+/*control buttons*/
+a.btn.btn-info.btn-md.edit {
+    background-color: darkcyan;
+    border-color: darkcyan;
+}
+a.btn.btn-info.btn-md.details {
+    background-color: darkcyan;
+    border-color:darkcyan
+}
+a.btn.btn-info.btn-md.delete {
+    background-color: chocolate;
+    border-color: chocolate;
+}
+/*add button*/
+#addClass {
+    background-color: #418681;
+    border-color: #fff;
+    margin-left: 13px;
+    margin-right: 50px;
+}
 .jumbotron {
     background-color: #418681;
     margin-bottom: 0px;
