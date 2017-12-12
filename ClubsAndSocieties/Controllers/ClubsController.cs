@@ -36,7 +36,7 @@ namespace ClubsAndSocieties.Controllers
 
         // GET: Clubs/Details/5
         public async Task<IActionResult> Details(int? id)
-        {
+        { 
             if (id == null)
             {
                 return NotFound();
@@ -150,7 +150,7 @@ namespace ClubsAndSocieties.Controllers
         }
 
         // POST: Clubs/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost, ActionName("Delete")] 
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

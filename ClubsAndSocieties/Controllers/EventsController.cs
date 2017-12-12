@@ -159,6 +159,40 @@ namespace ClubsAndSocieties.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public PartialViewResult _ClubEvents(int id)
+        {
+            var qry = _context.Events.Where(ce => ce.Id == id).ToList();
+            return PartialView(qry);
+        }
+        public PartialViewResult _Create(int ClubId)
+        {
+            return PartialView(new Event()
+            {
+                StartDate = DateTime.Now,
+                EndDate = DateTime.Now,
+                Id = ClubId
+            });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> _Create([Bind("Id,Title,Description,Location,StartDate,EndDate,Image,PrivateClubEvent,PublicClubEvent")] Event clubEvent)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Events.Add(clubEvent);
+                await _context.SaveChangesAsync();
+
+                //go back to edit page and refresh
+                return RedirectToAction(nameof(Edit),
+                        controllerName: "Clubs",
+                        routeValues: new { id = clubEvent.Id });
+            }
+
+
+            return View(clubEvent);
+        }
+
         private bool EventExists(int id)
         {
             return _context.Events.Any(e => e.Id == id);
