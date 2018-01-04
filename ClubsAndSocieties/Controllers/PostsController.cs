@@ -50,7 +50,7 @@ namespace ClubsAndSocieties.Controllers
         public IActionResult Create()
         {
             ViewData["EventID"] = new SelectList(_context.Events, "Id", "Id");
-            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Course");
+            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Name");
             return View();
         }
 
@@ -68,7 +68,7 @@ namespace ClubsAndSocieties.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["EventID"] = new SelectList(_context.Events, "Id", "Id", post.EventID);
-            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Course", post.StudentID);
+            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Name", post.StudentID);
             return View(post);
         }
 
@@ -86,7 +86,7 @@ namespace ClubsAndSocieties.Controllers
                 return NotFound();
             }
             ViewData["EventID"] = new SelectList(_context.Events, "Id", "Id", post.EventID);
-            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Course", post.StudentID);
+            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Name", post.StudentID);
             return View(post);
         }
 
@@ -123,7 +123,7 @@ namespace ClubsAndSocieties.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["EventID"] = new SelectList(_context.Events, "Id", "Id", post.EventID);
-            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Course", post.StudentID);
+            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Name", post.StudentID);
             return View(post);
         }
 

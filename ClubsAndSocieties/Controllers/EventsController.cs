@@ -22,6 +22,7 @@ namespace ClubsAndSocieties.Controllers
         // GET: Events
         public async Task<IActionResult> Index()
         {
+            
             string message = "No public events to approve";
             //Select the events that are marked as public
             var query = (from e in _context.Events
@@ -60,6 +61,8 @@ namespace ClubsAndSocieties.Controllers
         // GET: Events/Create
         public IActionResult Create()
         {
+            ViewData["EventID"] = new SelectList(_context.Events, "Id", "Id");
+            ViewData["StudentID"] = new SelectList(_context.Students, "Id", "Name");
             return View();
         }
 

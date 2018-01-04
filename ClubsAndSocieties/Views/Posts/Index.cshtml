@@ -49,10 +49,10 @@
                         @Html.DisplayFor(modelItem => item.PostMessage)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Event.Id)
+                        @Html.DisplayFor(modelItem => item.Event.Title)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Student.Id)
+                        @Html.DisplayFor(modelItem => item.Student.Name)
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-info btn-md edit"><span class="glyphicon glyphicon-edit"></span> Edit</a>

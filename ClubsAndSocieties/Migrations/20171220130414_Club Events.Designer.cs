@@ -11,9 +11,10 @@ using System;
 namespace ClubsAndSocieties.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171220130414_Club Events")]
+    partial class ClubEvents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -121,24 +122,6 @@ namespace ClubsAndSocieties.Migrations
                     b.HasIndex("AdministratorID");
 
                     b.ToTable("Clubs");
-                });
-
-            modelBuilder.Entity("ClubsAndSocieties.Models.ClubEvents", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("ClubID");
-
-                    b.Property<int>("EventID");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClubID");
-
-                    b.HasIndex("EventID");
-
-                    b.ToTable("ClubEvents");
                 });
 
             modelBuilder.Entity("ClubsAndSocieties.Models.Event", b =>
@@ -368,19 +351,6 @@ namespace ClubsAndSocieties.Migrations
                     b.HasOne("ClubsAndSocieties.Models.Administrator", "Administrator")
                         .WithMany("Clubs")
                         .HasForeignKey("AdministratorID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("ClubsAndSocieties.Models.ClubEvents", b =>
-                {
-                    b.HasOne("ClubsAndSocieties.Models.Club", "Clubs")
-                        .WithMany("ClubEvents")
-                        .HasForeignKey("ClubID")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("ClubsAndSocieties.Models.Event", "Events")
-                        .WithMany("ClubEvents")
-                        .HasForeignKey("EventID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

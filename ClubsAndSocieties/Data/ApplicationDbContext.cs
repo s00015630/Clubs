@@ -23,6 +23,7 @@ namespace ClubsAndSocieties.Data
         public DbSet<Member> Members { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Post> Posts { get; set; }
+        public DbSet<ClubEvents> ClubEvents { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

@@ -4,13 +4,25 @@
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+/*container for deleted field*/
+.dl-horizontal {
+    margin: 0 auto;
+}
+.dl-horizontal .club {
+    margin: 0 auto;
+    width: 400px;
+    
+} 
 body {
     background-color: white;
 }
 /* Wrapping element */
 .body-content {
-   background-color: burlywood;
+    background-color: rgb(255, 127, 42);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .000000001)));
+    
 }
+
 /*button*/
 #logout{
     padding:6px 20px 6px 12px;
@@ -20,9 +32,12 @@ body {
     font-size: 20px;
     line-height: 1.4;
 }
-
-
-
+.navbar-inverse .navbar-toggle {
+    border-color: #418681;
+}
+    #clubDelete {
+    margin: 65px auto 65px auto;
+}
 .jumbotron h1 a {
     text-decoration: none;
     color: white;
@@ -37,11 +52,13 @@ body {
     padding-right: 0;
    
 }
+
 .row{ 
     width: 400px;
     background-color: #fff;
     margin: 35px auto 35px auto;
-
+    border-radius: 5px;
+    padding:25px;
 }
 @media only screen and (min-width:1200px) {
     .container {
@@ -82,7 +99,7 @@ a.btn.btn-info.btn-md.delete {
 }
 
 .navbar-inverse {
-    background-color: #A3BEBC;
+    background-color: darkslategray;
     border-radius: 0;
     border: none;
     border-bottom: 1px solid darkgray;
@@ -127,6 +144,10 @@ tr:nth-child(even) {
 }
 @media (min-width: 480px) {
 
+.responstable{
+        margin-bottom:40px;
+    }
+
     .responstable td {
         border: 1px solid #D9E4E6;
     }
@@ -134,11 +155,12 @@ tr:nth-child(even) {
  .responstable th, .responstable td {
     text-align: left;
     margin: .5em 1em;
+    
 }
 
 .responstable th {
     border: 1px solid #FFF;
-    background-color: #A3BEBC;
+    background-color: darkslategray;
     color: #FFF;
     padding: 1em;
     border-radius: 7px;
@@ -167,10 +189,6 @@ td, th {
     color: #ffffff;
 }
 
-.dl-horizontal {
-    width: 400px;
-    margin: 0 auto;
-}
 
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
@@ -180,6 +198,7 @@ td, th {
 
 .table {
     margin-top: 20px;
+    margin-bottom:25px;
 }
 /*------- buttons----------*/
 .createBtn {
@@ -199,7 +218,8 @@ footer {
     background-color: #418681;
     color: #fff;
     padding: 25px;
-    margin-top:30px;
+    
+    border-top: 1px solid lightcyan;
 }
 .navbar-inverse .btn-link
 {

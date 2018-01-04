@@ -44,12 +44,18 @@ namespace ClubsAndSocieties.Controllers
 
             var club = await _context.Clubs
                 .Include(c => c.Administrator)
+                .Include(member => member.Members)
                 .SingleOrDefaultAsync(m => m.Id == id);
+
+            //var clubMembersCount = from m in _context.Members
+            //                       where club.Id == m.ClubID
+            //                       select m.Id;
+
             if (club == null)
             {
                 return NotFound();
             }
-
+            
             return View(club);
         }
 

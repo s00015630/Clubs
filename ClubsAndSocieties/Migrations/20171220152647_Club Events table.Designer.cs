@@ -11,9 +11,10 @@ using System;
 namespace ClubsAndSocieties.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171220152647_Club Events table")]
+    partial class ClubEventstable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -374,12 +375,12 @@ namespace ClubsAndSocieties.Migrations
             modelBuilder.Entity("ClubsAndSocieties.Models.ClubEvents", b =>
                 {
                     b.HasOne("ClubsAndSocieties.Models.Club", "Clubs")
-                        .WithMany("ClubEvents")
+                        .WithMany()
                         .HasForeignKey("ClubID")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ClubsAndSocieties.Models.Event", "Events")
-                        .WithMany("ClubEvents")
+                        .WithMany()
                         .HasForeignKey("EventID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -38,5 +38,6 @@ namespace ClubsAndSocieties.Models
         public virtual Administrator Administrator { get; set; }
 
         public virtual ICollection<Member> Members { get; set; }
+        public virtual ICollection<ClubEvents> ClubEvents { get; set; }
     }
 }
