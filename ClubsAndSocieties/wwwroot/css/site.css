@@ -18,9 +18,7 @@ body {
 }
 /* Wrapping element */
 .body-content {
-    background-color: rgb(255, 127, 42);
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .000000001)));
-    
+    background-color: darkkhaki;
 }
 
 /*button*/
@@ -53,12 +51,13 @@ body {
    
 }
 
-.row{ 
+.row {
     width: 400px;
     background-color: #fff;
     margin: 35px auto 35px auto;
     border-radius: 5px;
-    padding:25px;
+    padding: 25px;
+    border: 1px solid darkslategray;
 }
 @media only screen and (min-width:1200px) {
     .container {
@@ -67,24 +66,40 @@ body {
     }
 }
 /*page heading*/
-.pageHeading{
-    color:white;
-    margin-top:50px;
+.pageHeading {
+    color: white;
+    margin-top: 50px;
     margin-bottom: 50px;
-    font-weight:600;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+   
 }
+h2 {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    padding-top:40px;
+    font-weight:bolder;
+}
+
 /*control buttons*/
+a.btn-default {
+    margin-bottom: 20px;
+}
+input.btn.btn-default {
+    margin-bottom: 20px;
+}
+
 a.btn.btn-info.btn-md.edit {
     background-color: darkcyan;
-    border-color: darkcyan;
+    border: 1px solid white;
 }
 a.btn.btn-info.btn-md.details {
     background-color: darkcyan;
-    border-color:darkcyan
+    border:1px solid white;
 }
 a.btn.btn-info.btn-md.delete {
     background-color: chocolate;
-    border-color: chocolate;
+    border: 1px solid white;
 }
 /*add button*/
 #addClass {
@@ -102,7 +117,7 @@ a.btn.btn-info.btn-md.delete {
     background-color: darkslategray;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid darkgray;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.75);
 }
 
 @media only screen and (min-width:1200px) {
@@ -215,11 +230,10 @@ td, th {
     padding-left: 5%;
 }
 footer {
-    background-color: #418681;
+    background-color: darkslategray;
     color: #fff;
     padding: 25px;
-    
-    border-top: 1px solid lightcyan;
+    border-top: 1px solid #86a0a0;
 }
 .navbar-inverse .btn-link
 {
