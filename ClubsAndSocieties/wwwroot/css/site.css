@@ -229,11 +229,19 @@ td, th {
 #searchClubtxtBox {
     padding-left: 5%;
 }
+/*refresh btn*/
+.btn-info {
+    background-color: darkslategray;
+    border-color:#fff;
+}
 footer {
     background-color: darkslategray;
     color: #fff;
     padding: 25px;
     border-top: 1px solid #86a0a0;
+}
+footer.text-center p{
+    margin:10px;
 }
 .navbar-inverse .btn-link
 {

@@ -74,6 +74,16 @@
        orientation="0,1"
        id="guide230"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="198.68705,319.31847"
+       orientation="0,1"
+       id="guide196"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="205.78301,210.04059"
+       orientation="0,1"
+       id="guide198"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      d="M0 0h1140v360h-1140v-360z"
@@ -199,19 +209,19 @@
      style="fill:#782121" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:47.67642593px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.19191062"
-     x="180.9299"
-     y="89.655998"
+     style="font-style:normal;font-weight:normal;font-size:48.16374588px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.20409358"
+     x="166.09337"
+     y="90.572403"
      id="text190"
-     transform="scale(0.87050277,1.1487614)"><tspan
+     transform="scale(0.87940052,1.1371383)"><tspan
        sodipodi:role="line"
        id="tspan188"
-       x="180.9299"
-       y="89.655998"
-       style="stroke-width:1.19191062;font-size:48.00000046px">Events May Need Approval</tspan></text>
+       x="166.09337"
+       y="90.572403"
+       style="font-size:48.49062729px;stroke-width:1.20409358">Events May Need Approval</tspan></text>
   <g
      id="g815"
-     transform="matrix(0.13985783,0,0,0.13973489,757.24169,46.55275)"
+     transform="matrix(0.18871474,0,0,0.18909376,778.06579,35.405398)"
      style="fill:#ffffff">
     <g
        id="g719"

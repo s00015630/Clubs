@@ -66,6 +66,21 @@
        orientation="0,1"
        id="guide262"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="621.71677,310.19274"
+       orientation="0,1"
+       id="guide270"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="350.13172,199.6949"
+       orientation="0,1"
+       id="guide272"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="698.93213,86.534455"
+       orientation="1,0"
+       id="guide278"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs27">
@@ -86,21 +101,21 @@
      style="fill:#ff6600" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:52.37402725px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.30935061"
-     x="428.96735"
-     y="92.821327"
+     style="font-style:normal;font-weight:normal;font-size:53.56930161px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.33923244"
+     x="390.9104"
+     y="94.93969"
      id="text42"
-     transform="scale(0.91872086,1.0884699)"><tspan
+     transform="scale(0.93968783,1.0641832)"><tspan
        sodipodi:role="line"
        id="tspan40"
-       x="428.96735"
-       y="92.821327"
-       style="font-size:49.14785004px;stroke-width:1.30935061">Club Posts</tspan></text>
+       x="390.9104"
+       y="94.93969"
+       style="font-size:50.26950073px;stroke-width:1.33923244">Club Posts</tspan></text>
   <path
      id="path229"
      overflow="visible"
      font-weight="400"
-     d="m 687.46055,50.790605 v 63.152915 h 42.98678 v -3.94705 h -39.24881 v -3.98945 l 23.93551,-19.985849 c 1.94168,1.786754 5.51429,5.074752 5.96468,5.488878 2.85002,2.618161 5.87154,3.280221 7.80817,3.280221 1.9351,0 4.95898,-0.660835 7.80813,-3.280221 2.21306,-2.033012 23.97133,-22.060322 29.24312,-26.91246 v 33.557708 l 3.73798,3.947053 V 98.155297 50.790605 Z m 3.73797,3.947057 h 74.75961 v 4.625458 c -1.93171,1.77815 -29.31812,26.986625 -31.69618,29.171222 -2.09244,1.923677 -4.22131,2.308871 -5.35507,2.308871 -1.13176,0 -3.25702,-0.390068 -5.35146,-2.31272 h -0.004 C 721.11534,86.290717 692.02603,59.520016 691.19798,58.757957 Z m 0,9.254765 c 3.16682,2.914526 12.55771,11.558859 21.06995,19.392249 l -21.06995,17.592154 z m 63.52743,32.170062 a 1.8691768,1.973726 0 0 0 -1.3032,3.388146 l 9.89252,10.445835 h -25.392 v 3.94705 h 25.392 l -9.89252,10.44583 a 1.8691768,1.973726 0 1 0 2.64288,2.79069 L 770.47,111.97 756.06563,96.759948 a 1.8691768,1.973726 0 0 0 -1.33968,-0.597459 z"
-     style="font-weight:400;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;overflow:visible;isolation:auto;mix-blend-mode:normal;fill:#ffffff;stroke-width:1.9205482"
+     d="m 701.39103,52.623514 v 89.372756 h 60.57636 v -5.58578 h -55.30887 v -5.64579 l 33.72959,-28.28358 c 2.73618,2.52858 7.77066,7.18169 8.40534,7.76775 4.01621,3.70517 8.27409,4.6421 11.00316,4.6421 2.72692,0 6.98813,-0.9352 11.00311,-4.6421 3.11861,-2.87708 33.78006,-31.219335 41.20899,-38.085985 v 47.490205 l 5.26751,5.58579 v -5.58579 -67.029576 z m 5.26749,5.585797 h 105.35019 v 6.545857 c -2.72214,2.516403 -41.31468,38.190942 -44.66581,41.282542 -2.94864,2.72235 -5.94861,3.26747 -7.54629,3.26747 -1.59486,0 -4.58974,-0.55202 -7.5412,-3.27292 h -0.006 c -3.43253,-3.16969 -44.42477,-41.055056 -45.59165,-42.133507 z m 0,13.097161 C 711.12116,75.431052 724.35467,87.664341 736.35,98.75 l -29.69148,24.89607 z m 89.52196,45.526438 a 2.6340175,2.7931781 0 0 0 -1.83645,4.79484 l 13.9404,14.78274 h -35.78205 v 5.58578 h 35.78205 l -13.9404,14.78274 a 2.6340175,2.7931781 0 1 0 3.72431,3.94933 l 20.29843,-21.52495 -20.29843,-21.52497 a 2.6340175,2.7931781 0 0 0 -1.88786,-0.84551 z"
+     style="font-weight:400;line-height:normal;font-family:sans-serif;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;overflow:visible;isolation:auto;mix-blend-mode:normal;fill:#ffffff;stroke-width:2.71215963"
      inkscape:connector-curvature="0" />
 </svg>

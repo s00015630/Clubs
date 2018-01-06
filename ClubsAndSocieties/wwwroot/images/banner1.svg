@@ -74,6 +74,16 @@
        orientation="0,1"
        id="guide42"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="536.45503,307.96492"
+       orientation="0,1"
+       id="guide236"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="474.01053,200.10624"
+       orientation="0,1"
+       id="guide238"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      d="M0 0h1140v360h-1140v-360z"
@@ -88,20 +98,20 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:53.59467316px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.33986676"
-     x="311.10541"
+     x="318.92932"
      y="92.881416"
      id="text56"
      transform="scale(0.90695815,1.1025867)"><tspan
        sodipodi:role="line"
        id="tspan54"
-       x="311.10541"
+       x="318.92932"
        y="92.881416"
        style="stroke-width:1.33986676"><tspan
-   style="font-size:48px"
-   id="tspan260">Manage all Clubs</tspan> </tspan></text>
+         style="font-size:48px"
+         id="tspan260">Manage all Clubs</tspan></tspan></text>
   <g
      id="g438"
-     transform="matrix(0.08249584,0,0,0.08975816,723.03993,51.014474)"
+     transform="matrix(0.11001769,0,0,0.10852008,722.76072,50.85779)"
      style="fill:#ffffff">
     <path
        id="path432"

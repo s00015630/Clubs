@@ -64,6 +64,16 @@
        orientation="0,1"
        id="guide132"
        inkscape:locked="false" />
+    <sodipodi:guide
+       position="668.34507,311.09155"
+       orientation="0,1"
+       id="guide406"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="100.35211,198.69718"
+       orientation="0,1"
+       id="guide408"
+       inkscape:locked="false" />
   </sodipodi:namedview>
   <path
      d="M0 0h1140v360h-1140v-360z"
@@ -291,7 +301,7 @@
        style="font-size:48px">Notifications</tspan></text>
   <g
      id="g1137"
-     transform="matrix(0.92769091,0,0,0.96099658,700.7866,36.94013)"
+     transform="matrix(1.2663804,0,0,1.1877404,702.35506,51.992988)"
      style="fill:#ffffff">
     <g
        id="g1080"
